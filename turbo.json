@@ -1,0 +1,47 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env"],
+  "globalEnv": [
+    "NEXT_PUBLIC_APP_URL",
+    "CORS_ORIGIN",
+    "NEXT_PUBLIC_API_URL",
+    "NEXTAUTH_URL",
+    "NEXTAUTH_SECRET",
+    "GITHUB_CLIENT_ID",
+    "GITHUB_CLIENT_SECRET",
+    "DATABASE_URL",
+    "POSTGRES_DB_HOST",
+    "POSTGRES_DB_DATABASE",
+    "POSTGRES_DB_PORT",
+    "POSTGRES_DB_USER",
+    "POSTGRES_DB_PASSWORD",
+    "UPSTASH_REDIS_REST_URL",
+    "UPSTASH_REDIS_REST_TOKEN",
+    "PSC_DATABASE_HOST",
+    "PSC_DATABASE_USERNAME",
+    "PSC_DATABASE_PASSWORD",
+    "PSC_DATABASE_URL"
+  ],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "db:generate": {
+      "cache": false
+    },
+    "db:pull": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    },
+    "dev": {
+      "dependsOn": ["^db:generate"],
+      "cache": false
+    }
+  }
+}

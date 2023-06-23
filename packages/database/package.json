@@ -1,0 +1,29 @@
+{
+  "name": "database",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "source": "./src/index.ts",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "dev": "tsc -w",
+    "lint": "eslint \"src/**/*.ts*\""
+  },
+  "dependencies": {
+    "pg": "^8.11.0"
+  },
+  "devDependencies": {
+    "@types/connect-pg-simple": "^7.0.0",
+    "@types/node": "^18.16.13",
+    "@types/pg": "^8.6.6",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
+    "@mrizkiaiman/configs": "*",
+    "typescript": "^5.0.4"
+  }
+}
