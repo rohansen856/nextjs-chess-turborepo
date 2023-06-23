@@ -13,6 +13,7 @@
         "chess.js": "1.0.0-beta.6",
         "connect-pg-simple": "^8.0.0",
         "cors": "^2.8.5",
+        "database": "*",
         "dotenv": "^16.0.3",
         "express": "^4.18.2",
         "express-session": "^1.17.3",
