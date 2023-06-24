@@ -1,4 +1,4 @@
-import { io } from "../server.js";
+import { io } from "../server.js"
 import {
   chat,
   claimAbandoned,
@@ -7,34 +7,34 @@ import {
   joinLobby,
   leaveLobby,
   sendMove,
-} from "./game.socket.js";
-import type { Socket } from "socket.io";
+} from "./game.socket.js"
+import type { Socket } from "socket.io"
 
 const socketConnect = (socket: Socket) => {
-  const req = socket.request;
+  const req = socket.request
 
   socket.use((__, next) => {
     req.session.reload((err) => {
       if (err) {
-        socket.disconnect();
+        socket.disconnect()
       } else {
-        next();
+        next()
       }
-    });
-  });
+    })
+  })
 
-  socket.on("disconnect", leaveLobby);
+  socket.on("disconnect", leaveLobby)
 
-  socket.on("joinLobby", joinLobby);
-  socket.on("leaveLobby", leaveLobby);
+  socket.on("joinLobby", joinLobby)
+  socket.on("leaveLobby", leaveLobby)
 
-  socket.on("getLatestGame", getLatestGame);
-  socket.on("sendMove", sendMove);
-  socket.on("joinAsPlayer", joinAsPlayer);
-  socket.on("chat", chat);
-  socket.on("claimAbandoned", claimAbandoned);
-};
+  socket.on("getLatestGame", getLatestGame)
+  socket.on("sendMove", sendMove)
+  socket.on("joinAsPlayer", joinAsPlayer)
+  socket.on("chat", chat)
+  socket.on("claimAbandoned", claimAbandoned)
+}
 
 export const init = () => {
-  io.on("connection", socketConnect);
-};
+  io.on("connection", socketConnect)
+}

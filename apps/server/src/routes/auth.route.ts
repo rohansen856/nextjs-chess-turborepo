@@ -1,8 +1,8 @@
-import * as controller from "../controllers/auth.controller.js";
-import { Router } from "express";
+import * as controller from "../controllers/auth.controller.js"
+import { Router } from "express"
 
-const router = Router();
+const router = Router()
 
-router.route("/").get(controller.getCurrentSession);
+router.route("/").get(controller.getCurrentSession)
 
-export default router;
+export default router

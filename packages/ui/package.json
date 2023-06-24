@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint \"**/*.ts*\""
+    "lint:fix": "eslint --fix \"**/*.ts*\"",
+    "lint": "eslint \"**/*.ts*\"",
+    "ui:update": "npx shadcn-ui diff"
   },
   "dependencies": {
     "@radix-ui/react-accessible-icon": "^1.0.2",
@@ -41,6 +43,8 @@
     "react-day-picker": "^8.7.1"
   },
   "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/react": "^18.2.6",
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
@@ -48,6 +52,7 @@
     "@mrizkiaiman/configs": "*",
     "tailwind-merge": "^1.12.0",
     "tailwindcss-animate": "^1.0.5",
+    "tailwindcss": "^3.3.2",
     "typescript": "^5.0.4"
   }
 }

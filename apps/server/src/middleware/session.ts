@@ -1,24 +1,24 @@
-import { db } from "../db/index.js";
-import PGSimple from "connect-pg-simple";
-import type { Session } from "express-session";
-import session from "express-session";
-import { nanoid } from "nanoid";
-import type { User } from "types";
+import { db } from "../db/index.js"
+import PGSimple from "connect-pg-simple"
+import type { Session } from "express-session"
+import session from "express-session"
+import { nanoid } from "nanoid"
+import type { User } from "types"
 
-const PGSession = PGSimple(session);
+const PGSession = PGSimple(session)
 
 declare module "express-session" {
   // eslint-disable-next-line no-unused-vars
   interface SessionData {
-    user: User;
+    user: User
   }
 }
 declare module "http" {
   // eslint-disable-next-line no-unused-vars
   interface IncomingMessage {
     session: Session & {
-      user: User;
-    };
+      user: User
+    }
   }
 }
 const sessionMiddleware = session({
@@ -35,8 +35,8 @@ const sessionMiddleware = session({
     sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
   },
   genid: function () {
-    return nanoid(21);
+    return nanoid(21)
   },
-});
+})
 
-export default sessionMiddleware;
+export default sessionMiddleware

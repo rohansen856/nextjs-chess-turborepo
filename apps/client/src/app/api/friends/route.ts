@@ -3,10 +3,9 @@ import * as z from "zod"
 import { getServerSession } from "next-auth/next"
 import { eq } from "drizzle-orm"
 
-import { db } from "@/lib/db"
+import { db, friendrequest } from "database"
+import { psc } from "@/lib/psc.db" 
 import { authOptions } from "@/lib/auth"
-import { psc } from "@/lib/psc.db"
-import { friendrequest } from "@/lib/psc.schema"
 
 const newFriendSchema = z.object({
   userId: z.string(),

@@ -780,7 +780,7 @@ export default function GamePage({ initialLobby }: { initialLobby: Game }) {
                   className={
                     "max-w-[30rem]" +
                     (!m.author.id && m.author.name === "server"
-                      ? " bg-base-content p-2 text-base-300"
+                      ? " bg-base-content text-base-300 p-2"
                       : "")
                   }
                   key={i}

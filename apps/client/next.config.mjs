@@ -7,7 +7,8 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
-    serverComponentsExternalPackages: ["@prisma/client"],
+    esmExternals: true,
+    serverComponentsExternalPackages: ["database"],
   },
 }
 

@@ -1,4 +1,4 @@
-export { pgTable as db } from "database";
+export { pgTable as db } from "database"
 
 export const INIT_TABLES = /* sql */ `
     CREATE TABLE IF NOT EXISTS "user" (
@@ -23,4 +23,4 @@ export const INIT_TABLES = /* sql */ `
         started_at TIMESTAMP NOT NULL,
         ended_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
-`;
+`

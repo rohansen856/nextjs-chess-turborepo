@@ -2,8 +2,8 @@ import { getServerSession } from "next-auth"
 import { NextResponse } from "next/server"
 import * as z from "zod"
 
-import { psc } from "@/lib/psc.db"
-import { friendrequest } from "@/lib/psc.schema"
+import { friendrequest } from "database"
+import { psc } from "@/lib/psc.db" 
 
 import { authOptions } from "@/lib/auth"
 

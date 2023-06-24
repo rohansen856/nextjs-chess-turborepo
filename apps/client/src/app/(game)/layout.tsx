@@ -10,7 +10,7 @@ import { UserAccountNav } from "@/components/user-account-nav"
 import { SiteFooter } from "@/components/site-footer"
 
 import { ContextProvider } from "@/context/ContextProvider"
-import { db } from "@/lib/db"
+import { db } from "database"
 
 interface GameLayoutProps {
   children?: React.ReactNode

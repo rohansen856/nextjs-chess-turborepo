@@ -11,18 +11,20 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "dev": "tsc -w",
-    "lint": "eslint \"src/**/*.ts*\""
+    "db:generate": "prisma generate && drizzle-kit generate:mysql",
+    "db:pull": "prisma db pull",
+    "db:push": "prisma db push"
   },
   "dependencies": {
+    "@prisma/client": "^4.13.0",
+    "drizzle-orm": "^0.26.5",
     "pg": "^8.11.0"
   },
   "devDependencies": {
     "@types/connect-pg-simple": "^7.0.0",
     "@types/node": "^18.16.13",
     "@types/pg": "^8.6.6",
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "*",
+    "drizzle-kit": "^0.18.1",
     "@mrizkiaiman/configs": "*",
     "typescript": "^5.0.4"
   }

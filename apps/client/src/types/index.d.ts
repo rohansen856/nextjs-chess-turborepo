@@ -1,9 +1,9 @@
 import type { Chess } from "chess.js"
-import { User, profile as Profile } from "@prisma/client"
+import { User, profile as Profile } from "database"
 import type { Icon } from "lucide-react"
 import { InferModel } from "drizzle-orm"
 
-import { friendlist } from "@/lib/psc.schema"
+import { friendlist } from "database"
 
 import { Icons } from "@/components/icons"
 

@@ -32,7 +32,9 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         className={cn(buttonVariants({ variant: "outline" }))}
         onClick={() => {
           setIsGitHubLoading(true)
-          signIn("github")
+          signIn("github", {
+            callbackUrl: `${window.location.origin}/dashboard`,
+          })
         }}
         disabled={isGitHubLoading}
       >

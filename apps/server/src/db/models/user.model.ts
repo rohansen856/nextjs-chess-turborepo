@@ -1,40 +1,40 @@
-import { db } from "../index.js";
-import type { User } from "types";
+import { db } from "../index.js"
+import type { User } from "types"
 
 export const create = async (user: User, password: string) => {
   if (user.name === "Guest" || user.email === undefined) {
-    return null;
+    return null
   }
 
   try {
     const res = await db.query(
       `INSERT INTO "user"(name, email, password) VALUES($1, $2, $3) RETURNING id, name, email, wins, losses, draws`,
       [user.name, user.email || null, password]
-    );
-    return res.rows[0] as User;
+    )
+    return res.rows[0] as User
   } catch (err: unknown) {
-    console.log(err);
-    return null;
+    console.log(err)
+    return null
   }
-};
+}
 
 export const findById = async (id: number) => {
   if (id === 0) {
-    return null;
+    return null
   }
   try {
     const res = await db.query(
       `SELECT id, name, email, wins, losses, draws FROM "user" WHERE id=$1`,
       [id]
-    );
+    )
     if (res.rowCount) {
-      return res.rows[0] as User;
-    } else return null;
+      return res.rows[0] as User
+    } else return null
   } catch (err: unknown) {
-    console.log(err);
-    return null;
+    console.log(err)
+    return null
   }
-};
+}
 
 export const findByNameEmail = async (
   user: User,
@@ -47,11 +47,11 @@ export const findByNameEmail = async (
       const res = await db.query(
         `SELECT id, name, email, wins, losses, draws FROM "user" LIMIT $1`,
         [limit ?? 10]
-      );
-      return res.rows as Array<User & { password?: string }>;
+      )
+      return res.rows as Array<User & { password?: string }>
     } catch (err: unknown) {
-      console.log(err);
-      return null;
+      console.log(err)
+      return null
     }
   }
 
@@ -61,54 +61,54 @@ export const findByNameEmail = async (
         includePassword ? `, password` : ""
       } FROM "user" WHERE name=$1 OR email=$2 LIMIT $3`,
       [user.name, user.email, limit ?? 1]
-    );
-    return res.rows as Array<User & { password?: string }>;
+    )
+    return res.rows as Array<User & { password?: string }>
   } catch (err: unknown) {
-    console.log(err);
-    return null;
+    console.log(err)
+    return null
   }
-};
+}
 
 export const update = async (
   id: number,
   updatedUser: User & { password?: string }
 ) => {
   if (id === 0) {
-    return null;
+    return null
   }
 
   try {
-    let query = `UPDATE "user" SET name=$1, email=$2 WHERE id=$3 RETURNING id, name, email, wins, losses, draws`;
-    let values = [updatedUser.name, updatedUser.email, id];
+    let query = `UPDATE "user" SET name=$1, email=$2 WHERE id=$3 RETURNING id, name, email, wins, losses, draws`
+    let values = [updatedUser.name, updatedUser.email, id]
 
     if (updatedUser.password) {
-      query = `UPDATE "user" SET name=$1, email=$2, password=$3 WHERE id=$4 RETURNING id, name, email, wins, losses, draws`;
-      values = [updatedUser.name, updatedUser.email, updatedUser.password, id];
+      query = `UPDATE "user" SET name=$1, email=$2, password=$3 WHERE id=$4 RETURNING id, name, email, wins, losses, draws`
+      values = [updatedUser.name, updatedUser.email, updatedUser.password, id]
     }
-    const res = await db.query(query, values);
-    return res.rows[0] as User;
+    const res = await db.query(query, values)
+    return res.rows[0] as User
   } catch (err: unknown) {
-    console.log(err);
-    return null;
+    console.log(err)
+    return null
   }
-};
+}
 
 export const remove = async (id: number) => {
   if (id === 0) {
-    return null;
+    return null
   }
 
   try {
     const res = await db.query(
       `DELETE FROM "user" WHERE id = $1 RETURNING id, name, email`,
       [id]
-    );
-    return res.rows[0] as User;
+    )
+    return res.rows[0] as User
   } catch (err: unknown) {
-    console.log(err);
-    return null;
+    console.log(err)
+    return null
   }
-};
+}
 
 const UserModel = {
   create,
@@ -116,6 +116,6 @@ const UserModel = {
   findByNameEmail,
   update,
   remove,
-};
+}
 
-export default UserModel;
+export default UserModel

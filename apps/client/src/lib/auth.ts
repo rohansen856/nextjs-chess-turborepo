@@ -4,7 +4,7 @@ import GitHubProvider from "next-auth/providers/github"
 
 import { env } from "@/env.mjs"
 
-import { db } from "@/lib/db"
+import { db } from "database"
 
 export const authOptions: NextAuthOptions = {
   // huh any! I know.

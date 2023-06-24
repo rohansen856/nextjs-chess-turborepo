@@ -2,6 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": [".env"],
   "globalEnv": [
+    "NODE_ENV",
     "NEXT_PUBLIC_APP_URL",
     "CORS_ORIGIN",
     "NEXT_PUBLIC_API_URL",
@@ -30,6 +31,9 @@
     "lint": {
       "outputs": []
     },
+    "lint:fix": {
+      "outputs": []
+    },
     "db:generate": {
       "cache": false
     },
@@ -37,6 +41,9 @@
       "cache": false
     },
     "db:push": {
+      "cache": false
+    },
+    "ui:update": {
       "cache": false
     },
     "dev": {

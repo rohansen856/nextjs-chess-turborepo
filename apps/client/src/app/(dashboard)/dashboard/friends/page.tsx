@@ -3,8 +3,8 @@ import { eq } from "drizzle-orm"
 
 import { User, Friend } from "@/types"
 
+import { friendlist } from "database"
 import { psc } from "@/lib/psc.db"
-import { friendlist } from "@/lib/psc.schema"
 import { getCurrentUser } from "@/lib/session"
 
 import {
