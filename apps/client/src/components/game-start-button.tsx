@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
-import { ButtonProps, buttonVariants } from "ui/src/components/ui/button"
+import { ButtonProps, buttonVariants } from "@rcsen/ui/src/components/ui/button"
 import { Icons } from "@/components/icons"
 
 interface GameStartButtonProps extends ButtonProps {}

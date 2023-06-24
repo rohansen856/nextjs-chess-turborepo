@@ -7,8 +7,8 @@ import { useContext, useState } from "react"
 import { SessionContext } from "@/context/ContextProvider"
 import { fetchActiveGame } from "@/lib/game"
 
-import { Input } from "ui/src/components/ui/input"
-import { Button } from "ui/src/components/ui/button"
+import { Input } from "@rcsen/ui/src/components/ui/input"
+import { Button } from "@rcsen/ui/src/components/ui/button"
 
 export default function JoinGame() {
   const session = useContext(SessionContext)

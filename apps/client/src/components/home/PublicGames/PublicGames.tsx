@@ -12,7 +12,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "ui/src/components/ui/table"
+} from "@rcsen/ui/src/components/ui/table"
 
 export default async function PublicGames() {
   const games = await fetchPublicGames()

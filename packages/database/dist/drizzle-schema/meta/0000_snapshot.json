@@ -1,0 +1,111 @@
+{
+  "version": "5",
+  "dialect": "mysql",
+  "id": "cfd316ca-dcee-430e-83e6-0b9db68ecad2",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "friendlist": {
+      "name": "friendlist",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "int",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "userId": {
+          "name": "userId",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "friendId": {
+          "name": "friendId",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "friendImage": {
+          "name": "friendImage",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "friendName": {
+          "name": "friendName",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "(now())"
+        },
+        "status": {
+          "name": "status",
+          "type": "enum('friend','pending')",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'pending'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {}
+    },
+    "friendrequest": {
+      "name": "friendrequest",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "int",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "receiverId": {
+          "name": "receiverId",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "senderId": {
+          "name": "senderId",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "singleRequest": {
+          "name": "singleRequest",
+          "columns": [
+            "senderId",
+            "receiverId"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {}
+    }
+  },
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}

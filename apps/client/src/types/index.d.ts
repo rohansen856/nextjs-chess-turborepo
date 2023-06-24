@@ -1,9 +1,9 @@
 import type { Chess } from "chess.js"
-import { User, profile as Profile } from "database"
+import { User, profile as Profile } from "@rcsen/database"
 import type { Icon } from "lucide-react"
 import { InferModel } from "drizzle-orm"
 
-import { friendlist } from "database"
+import { friendlist } from "@rcsen/database"
 
 import { Icons } from "@/components/icons"
 

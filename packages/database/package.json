@@ -1,5 +1,5 @@
 {
-  "name": "database",
+  "name": "@rcsen/database",
   "version": "0.0.0",
   "private": true,
   "main": "./dist/index.js",
@@ -25,7 +25,7 @@
     "@types/node": "^18.16.13",
     "@types/pg": "^8.6.6",
     "drizzle-kit": "^0.18.1",
-    "@mrizkiaiman/configs": "*",
+    "@rcsen/configs": "*",
     "typescript": "^5.0.4"
   }
 }

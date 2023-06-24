@@ -3,17 +3,17 @@ import { Check, ChevronsUpDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-import { Button } from "ui/src/components/ui/button"
+import { Button } from "@rcsen/ui/src/components/ui/button"
 import {
   Command,
   CommandGroup,
   CommandItem,
-} from "ui/src/components/ui/command"
+} from "@rcsen/ui/src/components/ui/command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "ui/src/components/ui/popover"
+} from "@rcsen/ui/src/components/ui/popover"
 
 const frameworks = [
   {

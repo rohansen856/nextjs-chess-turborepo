@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 
 import { getCurrentUser } from "@/lib/session"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "ui/src/components/ui/button"
+import { buttonVariants } from "@rcsen/ui/src/components/ui/button"
 
 export default async function IndexPage() {
   const user = await getCurrentUser()

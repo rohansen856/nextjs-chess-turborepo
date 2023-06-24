@@ -13,13 +13,13 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "ui/src/components/ui/table"
+} from "@rcsen/ui/src/components/ui/table"
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "ui/src/components/ui/avatar"
-import { Button } from "ui/src/components/ui/button"
+} from "@rcsen/ui/src/components/ui/avatar"
+import { Button } from "@rcsen/ui/src/components/ui/button"
 import { Icons } from "@/components/icons"
 
 export function IncomingRequest() {

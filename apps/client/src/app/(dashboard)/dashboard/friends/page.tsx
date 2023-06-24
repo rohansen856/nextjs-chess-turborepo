@@ -3,7 +3,7 @@ import { eq } from "drizzle-orm"
 
 import { User, Friend } from "@/types"
 
-import { friendlist } from "database"
+import { friendlist } from "@rcsen/database"
 import { psc } from "@/lib/psc.db"
 import { getCurrentUser } from "@/lib/session"
 
@@ -12,7 +12,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "ui/src/components/ui/tabs"
+} from "@rcsen/ui/src/components/ui/tabs"
 import { FriendsTable } from "@/components/friends-table"
 import { FindFriend } from "@/components/friend-search"
 

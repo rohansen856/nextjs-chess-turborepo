@@ -9,8 +9,8 @@ import * as z from "zod"
 
 import { cn } from "@/lib/utils"
 import { userAuthSchema } from "@/lib/validations/auth"
-import { buttonVariants } from "ui/src/components/ui/button"
-import { toast } from "ui/src/components/ui/use-toast"
+import { buttonVariants } from "@rcsen/ui/src/components/ui/button"
+import { toast } from "@rcsen/ui/src/components/ui/use-toast"
 import { Icons } from "@/components/icons"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}

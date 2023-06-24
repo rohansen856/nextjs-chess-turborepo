@@ -7,9 +7,9 @@ import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
 
 import type { User, Friend } from "@/types"
 
-import { Input } from "ui/src/components/ui/input"
-import { Button } from "ui/src/components/ui/button"
-import { toast } from "ui/src/components/ui/use-toast"
+import { Input } from "@rcsen/ui/src/components/ui/input"
+import { Button } from "@rcsen/ui/src/components/ui/button"
+import { toast } from "@rcsen/ui/src/components/ui/use-toast"
 import { Icons } from "@/components/icons"
 import { IncomingRequest } from "@/components/friend-request-incoming"
 import { SendRequest } from "@/components/friend-request-send"

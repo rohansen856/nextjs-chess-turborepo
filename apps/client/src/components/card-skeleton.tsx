@@ -3,8 +3,8 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-} from "ui/src/components/ui/card"
-import { Skeleton } from "ui/src/components/ui/skeleton"
+} from "@rcsen/ui/src/components/ui/card"
+import { Skeleton } from "@rcsen/ui/src/components/ui/skeleton"
 
 export function CardSkeleton() {
   return (

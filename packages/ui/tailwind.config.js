@@ -1,4 +1,4 @@
-const baseConfig = require("@mrizkiaiman/configs/tailwind/tailwind.config.js")
+const baseConfig = require("@rcsen/configs/tailwind/tailwind.config.js")
 const { fontFamily } = require("tailwindcss/defaultTheme")
 
 module.exports = {

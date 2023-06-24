@@ -12,13 +12,13 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "ui/src/components/ui/table"
+} from "@rcsen/ui/src/components/ui/table"
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "ui/src/components/ui/avatar"
-import { Input } from "ui/src/components/ui/input"
+} from "@rcsen/ui/src/components/ui/avatar"
+import { Input } from "@rcsen/ui/src/components/ui/input"
 import { SortFriends } from "@/components/sort-button"
 
 interface FriendsTableProps {

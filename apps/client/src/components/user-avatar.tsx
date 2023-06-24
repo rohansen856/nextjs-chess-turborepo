@@ -1,11 +1,11 @@
-import { User } from "database"
+import { User } from "@rcsen/database"
 import { AvatarProps } from "@radix-ui/react-avatar"
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "ui/src/components/ui/avatar"
+} from "@rcsen/ui/src/components/ui/avatar"
 import { Icons } from "@/components/icons"
 
 interface UserAvatarProps extends AvatarProps {

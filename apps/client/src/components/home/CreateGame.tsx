@@ -7,7 +7,7 @@ import { useContext, useState } from "react"
 import { SessionContext } from "@/context/ContextProvider"
 import { createGame } from "@/lib/game"
 
-import { Checkbox } from "ui/src/components/ui/checkbox"
+import { Checkbox } from "@rcsen/ui/src/components/ui/checkbox"
 import {
   Select,
   SelectContent,
@@ -15,10 +15,10 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "ui/src/components/ui/select"
-import { Label } from "ui/src/components/ui/label"
-import { Button } from "ui/src/components/ui/button"
-import { toast } from "ui/src/components/ui/use-toast"
+} from "@rcsen/ui/src/components/ui/select"
+import { Label } from "@rcsen/ui/src/components/ui/label"
+import { Button } from "@rcsen/ui/src/components/ui/button"
+import { toast } from "@rcsen/ui/src/components/ui/use-toast"
 
 export default function CreateGame() {
   const session = useContext(SessionContext)

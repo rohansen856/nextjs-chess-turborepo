@@ -3,8 +3,8 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-import { Input } from "ui/src/components/ui/input"
-import { toast } from "ui/src/components/ui/use-toast"
+import { Input } from "@rcsen/ui/src/components/ui/input"
+import { toast } from "@rcsen/ui/src/components/ui/use-toast"
 
 interface DocsSearchProps extends React.HTMLAttributes<HTMLFormElement> {}
 

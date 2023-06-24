@@ -1,5 +1,5 @@
-import { Skeleton } from "ui/src/components/ui/skeleton"
-import { Separator } from "ui/src/components/ui/separator"
+import { Skeleton } from "@rcsen/ui/src/components/ui/skeleton"
+import { Separator } from "@rcsen/ui/src/components/ui/separator"
 
 export default function FriendsDataLoading() {
   return (

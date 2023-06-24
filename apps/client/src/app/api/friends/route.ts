@@ -3,7 +3,7 @@ import * as z from "zod"
 import { getServerSession } from "next-auth/next"
 import { eq } from "drizzle-orm"
 
-import { db, friendrequest } from "database"
+import { db, friendrequest } from "@rcsen/database"
 import { psc } from "@/lib/psc.db" 
 import { authOptions } from "@/lib/auth"
 

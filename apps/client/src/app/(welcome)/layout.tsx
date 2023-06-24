@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "ui/src/components/ui/button"
+import { buttonVariants } from "@rcsen/ui/src/components/ui/button"
 import { MainNav } from "@/components/main-nav"
 import { SiteFooter } from "@/components/site-footer"
 

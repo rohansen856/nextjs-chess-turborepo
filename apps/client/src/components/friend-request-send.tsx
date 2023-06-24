@@ -12,14 +12,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "ui/src/components/ui/table"
+} from "@rcsen/ui/src/components/ui/table"
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "ui/src/components/ui/avatar"
-import { Button } from "ui/src/components/ui/button"
-import { toast } from "ui/src/components/ui/use-toast"
+} from "@rcsen/ui/src/components/ui/avatar"
+import { Button } from "@rcsen/ui/src/components/ui/button"
+import { toast } from "@rcsen/ui/src/components/ui/use-toast"
 import { Icons } from "@/components/icons"
 
 interface SendRequestProps {

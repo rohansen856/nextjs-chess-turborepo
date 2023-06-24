@@ -3,13 +3,13 @@
 import * as React from "react"
 import { useRouter } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { User } from "database"
+import { User } from "@rcsen/database"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 
 import { cn } from "@/lib/utils"
 import { userNameSchema } from "@/lib/validations/user"
-import { buttonVariants } from "ui/src/components/ui/button"
+import { buttonVariants } from "@rcsen/ui/src/components/ui/button"
 import {
   Card,
   CardContent,
@@ -17,10 +17,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "ui/src/components/ui/card"
-import { Input } from "ui/src/components/ui/input"
-import { Label } from "ui/src/components/ui/label"
-import { toast } from "ui/src/components/ui/use-toast"
+} from "@rcsen/ui/src/components/ui/card"
+import { Input } from "@rcsen/ui/src/components/ui/input"
+import { Label } from "@rcsen/ui/src/components/ui/label"
+import { toast } from "@rcsen/ui/src/components/ui/use-toast"
 import { Icons } from "@/components/icons"
 
 interface UserNameFormProps extends React.HTMLAttributes<HTMLFormElement> {

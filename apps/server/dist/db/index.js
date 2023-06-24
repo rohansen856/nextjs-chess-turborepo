@@ -1,4 +1,4 @@
-export { pgTable as db } from "database";
+export { pgTable as db } from "@rcsen/database";
 export const INIT_TABLES = /* sql */ `
     CREATE TABLE IF NOT EXISTS "user" (
         id SERIAL PRIMARY KEY,

@@ -6,6 +6,6 @@
     "rootDir": "./src"
   },
   "exclude": ["node_modules"],
-  "extends": "@mrizkiaiman/configs/tsconfig/base.json",
+  "extends": "@rcsen/configs/tsconfig/base.json",
   "include": ["src"]
 }

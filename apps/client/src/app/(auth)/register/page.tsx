@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "ui/src/components/ui/button"
+import { buttonVariants } from "@rcsen/ui/src/components/ui/button"
 import { Icons } from "@/components/icons"
 import { UserAuthForm } from "@/components/user-auth-form"
 

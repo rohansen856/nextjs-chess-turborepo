@@ -8,7 +8,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
     esmExternals: true,
-    serverComponentsExternalPackages: ["database"],
+    serverComponentsExternalPackages: ["@rcsen/database"],
   },
 }
 

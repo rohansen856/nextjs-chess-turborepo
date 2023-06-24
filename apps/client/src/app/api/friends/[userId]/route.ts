@@ -2,7 +2,7 @@ import { getServerSession } from "next-auth"
 import { NextResponse } from "next/server"
 import * as z from "zod"
 
-import { friendrequest } from "database"
+import { friendrequest } from "@rcsen/database"
 import { psc } from "@/lib/psc.db" 
 
 import { authOptions } from "@/lib/auth"
