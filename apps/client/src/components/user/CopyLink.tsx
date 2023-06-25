@@ -28,7 +28,7 @@ export default function CopyLink({ name }: { name: string }) {
     >
       <label
         tabIndex={0}
-        className="badge badge-md h-8 gap-1 bg-base-300 font-mono text-xs text-base-content sm:h-5 sm:text-sm"
+        className="badge badge-md bg-base-300 text-base-content h-8 gap-1 font-mono text-xs sm:h-5 sm:text-sm"
         onClick={copyLink}
       >
         <IconCopy size={16} />

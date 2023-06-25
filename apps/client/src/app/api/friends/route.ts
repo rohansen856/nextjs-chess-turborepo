@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth/next"
 import { eq } from "drizzle-orm"
 
 import { db, friendrequest } from "@rcsen/database"
-import { psc } from "@/lib/psc.db" 
+import { psc } from "@/lib/psc.db"
 import { authOptions } from "@/lib/auth"
 
 const newFriendSchema = z.object({

@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "lint:fix": "eslint --fix \"**/*.ts*\"",
-    "lint": "eslint \"**/*.ts*\"",
+    "lint:fix": "eslint \"**/*.tsx*\" --fix",
+    "lint": "eslint \"**/*.tsx*\"",
     "ui:update": "npx shadcn-ui diff"
   },
   "dependencies": {

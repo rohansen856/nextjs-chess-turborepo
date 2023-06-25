@@ -23,7 +23,7 @@ export default async function PublicGames() {
         Public games <RefreshButton />
       </h2>
 
-      <div className="h-80 max-h-80 overflow-y-auto rounded-xl bg-secondary">
+      <div className="bg-secondary h-80 max-h-80 overflow-y-auto rounded-xl">
         <Table>
           <TableCaption>Join a random game.</TableCaption>
           <TableHeader>

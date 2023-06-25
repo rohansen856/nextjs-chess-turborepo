@@ -3,7 +3,7 @@ import { NextResponse } from "next/server"
 import * as z from "zod"
 
 import { friendrequest } from "@rcsen/database"
-import { psc } from "@/lib/psc.db" 
+import { psc } from "@/lib/psc.db"
 
 import { authOptions } from "@/lib/auth"
 

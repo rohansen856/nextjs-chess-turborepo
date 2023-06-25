@@ -1,4 +1,4 @@
-import { drizzle } from "@rcsen/database";
+import { drizzle } from "@rcsen/database"
 
 import { connect } from "@planetscale/database"
 
