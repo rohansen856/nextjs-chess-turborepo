@@ -56,6 +56,9 @@ async function addFriend(receiverId: string) {
 }
 
 export function SendRequest({ friendData, canRequest }: SendRequestProps) {
+
+  if(!friendData || friendData.length === 0) return null
+
   return (
     <Table>
       <TableCaption>User found.</TableCaption>
