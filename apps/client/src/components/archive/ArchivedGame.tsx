@@ -286,7 +286,7 @@ export default function ArchivedGame({ game }: { game: Game }) {
               >
                 <label
                   tabIndex={0}
-                  className="badge badge-md bg-base-300 text-base-content h-8 gap-1 font-mono text-xs sm:h-5 sm:text-sm"
+                  className="badge badge-md h-8 gap-1 bg-base-300 font-mono text-xs text-base-content sm:h-5 sm:text-sm"
                   onClick={copyLink}
                 >
                   <IconCopy size={16} />
@@ -355,7 +355,7 @@ export default function ArchivedGame({ game }: { game: Game }) {
         </div>
 
         <div className="relative h-60 w-full min-w-fit">
-          <div className="bg-base-300 flex h-full w-full min-w-[64px] flex-col rounded-lg p-4 shadow-sm">
+          <div className="flex h-full w-full min-w-[64px] flex-col rounded-lg bg-base-300 p-4 shadow-sm">
             {game.endReason === "abandoned"
               ? game.winner === "draw"
                 ? "The game ended in a draw due to abandonment."

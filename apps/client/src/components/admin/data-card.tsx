@@ -15,7 +15,7 @@ interface DataCardProps {
 
 export function DataCard({ title, data, footer }: DataCardProps) {
   return (
-    <Card className="bg-secondary m-2 w-[300px]">
+    <Card className="m-2 w-[300px] bg-secondary">
       <CardHeader>
         <CardDescription>{title}</CardDescription>
         <CardTitle>{data}</CardTitle>

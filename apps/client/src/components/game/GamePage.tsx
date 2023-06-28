@@ -579,7 +579,7 @@ export default function GamePage({ initialLobby }: { initialLobby: Game }) {
         {/* overlay */}
         {(!lobby.white?.id || !lobby.black?.id) && (
           <div className="absolute inset-y-0 right-0 z-10 flex h-full w-full items-center justify-center bg-black/70">
-            <div className="bg-background text-foreground flex w-full items-center justify-center gap-4 px-2 py-4">
+            <div className="flex w-full items-center justify-center gap-4 bg-background px-2 py-4 text-foreground">
               Waiting for opponent.
               {session?.profile?.id !== lobby.white?.id &&
                 session?.profile?.id !== lobby.black?.id && (
@@ -641,7 +641,7 @@ export default function GamePage({ initialLobby }: { initialLobby: Game }) {
               >
                 <label
                   tabIndex={0}
-                  className="badge badge-md bg-base-300 text-base-content h-8 gap-1 font-mono text-xs sm:h-5 sm:text-sm"
+                  className="badge badge-md h-8 gap-1 bg-base-300 font-mono text-xs text-base-content sm:h-5 sm:text-sm"
                   onClick={copyInvite}
                 >
                   <IconCopy size={16} />$
@@ -722,7 +722,7 @@ export default function GamePage({ initialLobby }: { initialLobby: Game }) {
               session?.profile?.id === lobby.black?.id &&
               lobby.white &&
               !lobby.white?.connected)) && (
-            <div className="bg-neutral/95 absolute w-full rounded-t-lg p-2">
+            <div className="absolute w-full rounded-t-lg bg-neutral/95 p-2">
               {lobby.endReason ? (
                 <div>
                   {lobby.endReason === "abandoned"
@@ -770,7 +770,7 @@ export default function GamePage({ initialLobby }: { initialLobby: Game }) {
               )}
             </div>
           )}
-          <div className="bg-base-300 flex h-full w-full min-w-[64px] flex-col rounded-lg p-4 shadow-sm">
+          <div className="flex h-full w-full min-w-[64px] flex-col rounded-lg bg-base-300 p-4 shadow-sm">
             <ul
               className="mb-4 flex h-full flex-col gap-1 overflow-y-scroll break-words"
               ref={chatListRef}

@@ -7,8 +7,8 @@ module.exports = {
       "./src/**/*.{js,ts,jsx,tsx}",
       "./pages/**/*.{js,ts,jsx,tsx}",
     ],
-    plugins: [require("daisyui"), require("tailwindcss-animate"), require("@tailwindcss/typography")],
-    darkMode: ["class", '[data-theme="chessuDark"]'],
+    plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+    darkMode: ["class"],
     theme: {
         container: {
             center: true,
