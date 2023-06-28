@@ -13,7 +13,7 @@ module.exports = {
       "react/jsx-key": "off",
       "react-hooks/exhaustive-deps": "off",
       "tailwindcss/no-custom-classname": "off",
-      "tailwindcss/classnames-order": "error"
+      "tailwindcss/classnames-order": "off"
     },
     "settings": {
       "tailwindcss": {
